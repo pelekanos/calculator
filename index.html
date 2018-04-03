@@ -6,13 +6,15 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 
 </head>
 
 <body>
     <div id="calculator">
-        <div class="display"></div>
+        <div class="display">
+            <p id="display-history"></p>
+            <h2 id="display-result">00</h2>
+        </div>
         <div class="memory">MC</div>
         <div class="memory">MR</div>
         <div class="memory">M+</div>
@@ -26,26 +28,25 @@
         <div class="button">CE</div>
         <div class="button">C</div>
         <div class="button">BA</div>
-        <div class="button">/</div>
-        <div class="button">7</div>
-        <div class="button">8</div>
-        <div class="button">9</div>
-        <div class="button">x</div>
-        <div class="button">4</div>
-        <div class="button">5</div>
-        <div class="button">6</div>
-        <div class="button">-</div>
-        <div class="button">1</div>
-        <div class="button">2</div>
-        <div class="button">3</div>
-        <div class="button">+</div>
-        <div class="button">+-</div>
-        <div class="button">0</div>
-        <div class="button">.</div>
-        <div class="button">=</div>
-
+        <div class="button" onclick="ArithmeticOperationSelection('divide')">/</div>
+        <div class="button" onclick="GetUserInput(7)">7</div>
+        <div class="button" onclick="GetUserInput(8)">8</div>
+        <div class="button" onclick="GetUserInput(9)">9</div>
+        <div class="button" onclick="ArithmeticOperationSelection('multiply')">x</div>
+        <div class="button" onclick="GetUserInput(4)">4</div>
+        <div class="button" onclick="GetUserInput(5)">5</div>
+        <div class="button" onclick="GetUserInput(6)">6</div>
+        <div class="button" onclick="ArithmeticOperationSelection('minus')">-</div>
+        <div class="button" onclick="GetUserInput(1)">1</div>
+        <div class="button" onclick="GetUserInput(2)">2</div>
+        <div class="button" onclick="GetUserInput(3)">3</div>
+        <div class="button" onclick="ArithmeticOperationSelection('plus')">+</div>
+        <div class="button" onclick="ArithmeticOperationSelection('NegPos')">+-</div>
+        <div class="button" onclick="GetUserInput(0)">0</div>
+        <div class="button" onclick="ArithmeticOperationSelection('dot')">.</div>
+        <div class="button" onclick="ArithmeticOperationSelection('equals')">=</div>
     </div>
 
+    <script src="script.js"></script>
 </body>
-
 </html>
