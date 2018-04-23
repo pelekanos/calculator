@@ -10,8 +10,12 @@ div {
     grid-gap: 5px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(10, 50px);
-    max-width: 500px;
     background-color: #5e91f2;
+}
+
+@media only screen and (min-width: 1000px) {
+    #calculator{
+    max-width: 500px;
 }
 
 .display {
